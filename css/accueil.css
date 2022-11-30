@@ -1,1 +1,11 @@
-/* ------------ Code Sass de la page d'accueil du site ------------ *//*# sourceMappingURL=accueil.css.map */
+/* ------------ Code Sass de la page d'accueil du site ------------ */
+/* ------------ Variable ------------ */
+.html {
+  margin: 0px;
+  padding: 0px;
+}
+
+.obj-center {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=accueil.css.map */

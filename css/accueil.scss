@@ -1,2 +1,16 @@
 /* ------------ Code Sass de la page d'accueil du site ------------ */
 
+/* ------------ Variable ------------ */
+
+$border-nul: 0px;
+
+
+.html{
+    margin: $border-nul;
+    padding: $border-nul;
+}
+
+.obj-center{
+    display: flex;
+    justify-content: center;
+}
