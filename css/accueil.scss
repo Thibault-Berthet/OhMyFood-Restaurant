@@ -3,14 +3,187 @@
 /* ------------ Variable ------------ */
 
 $border-nul: 0px;
+$font-weight-name : 500;
+$font-weight-location : 300;
+$padding-footer : 0.5rem;
 
+/* ------------ Mixin ------------ */
 
-.html{
-    margin: $border-nul;
-    padding: $border-nul;
+@mixin card-shadow {
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
 }
 
-.obj-center{
+@mixin obj-center {
     display: flex;
     justify-content: center;
+}
+
+@mixin align-hori {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ------------ General change ------------ */
+
+.html, body{
+    margin: $border-nul;
+    padding: $border-nul;
+    font-family: 'Roboto','Shrikhand', Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.bg-grey{
+    background-color: #e0e0e0;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.logo{
+    padding: 1rem;
+    @include obj-center;
+}
+
+a.passouligne{
+    text-decoration: none;
+    color: black;
+    @include obj-center;
+}
+a.passouligne:visited{
+    color: inherit;
+    font-weight: inherit;
+}
+
+/* ------------ Location of the smartphone ------------ */
+
+.location{
+    box-shadow: 0px 2px 4px gray inset;
+    font-weight: 500;
+    padding: 1rem;
+    background-color: #CECECE;
+    @include obj-center;
+    &__logo{
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+/* ------------ Instruction ------------ */
+
+.instr-1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    @include obj-center;
+}
+.instr-2{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 2rem;
+    text-align: center;
+    @include obj-center;
+}
+.navi{
+    padding: 1rem;
+    border-radius: 15rem;
+    margin: 0rem 5rem 0rem 5rem;
+    color: white;
+    background: linear-gradient(#FF79DA,#9356DC);
+    @include card-shadow;
+    @include obj-center;
+}
+.fonct{
+    padding: 1rem;
+    @include align-hori;
+    &__nmbr-form{
+        color: white;
+        background-color: #9356DC;
+        border-radius: 15rem;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        position: absolute;
+    }
+    &__logo{
+        padding: 2rem;
+    }
+    &__order{
+        @include card-shadow;
+        padding-left: 1rem;
+        margin-left: 0.6rem;
+        border: solid red 1px;
+        border-radius: 2rem;
+        width: 90%;
+    }
+}
+
+/* ------------ Restaurants ------------ */
+
+.card-restau{
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    width: 90%;
+    @include card-shadow;
+    &__image{
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+    }
+    &__sp-betw{
+        @include align-hori;
+        justify-content: space-between;
+        &__name-card{
+            padding: 0.5rem;
+            &__name-restau{
+                font-weight: $font-weight-name;
+                font-size: large;
+                padding-bottom: 0.4rem;
+            }
+            &__name-location{
+                font-weight: $font-weight-location;
+                padding-bottom: 0.4rem;
+            }
+        }
+        &__logo{
+            padding-right: 1rem;
+            font-size: x-large;
+        }
+    }
+}
+
+/* ------------ Footer ------------ */
+
+.foot{
+    background-color: #272727;
+    color : white;
+    padding: 1rem;
+    &__logo-ohmyfood{
+        font-family: 'Shrikhand','Roboto', Impact, "Arial Black", Arial, Verdana, sans-serif;
+        font-size: large;
+        padding-bottom: 1rem;
+    }
+    &__restaurant-proposal{
+        @include align-hori;
+        padding-bottom: $padding-footer;
+        &__logo{
+            padding-right: 0.5rem
+        }
+        &__txt{
+            
+        }
+    }
+    &__became-partner{
+        @include align-hori;
+        padding-bottom: $padding-footer;
+        &__logo{
+            padding-right: 0.5rem;
+        }
+        &__txt{
+
+        }
+    }
+    &__legal-mention{
+        padding-bottom: $padding-footer;
+    }
+    &__contact{
+        padding-bottom: $padding-footer;
+    }
 }
