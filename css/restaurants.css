@@ -25,18 +25,22 @@
 }
 @-webkit-keyframes selected {
   0% {
-    transform: scaleX(0);
+    transform: translateX(2rem);
+    visibility: collapse;
   }
   100% {
-    transform: scaleX(1) rotate(360deg);
+    transform: translateX(0rem);
+    visibility: visible;
   }
 }
 @keyframes selected {
   0% {
-    transform: scaleX(0);
+    transform: translateX(2rem);
+    visibility: collapse;
   }
   100% {
-    transform: scaleX(1) rotate(360deg);
+    transform: translateX(0rem);
+    visibility: visible;
   }
 }
 /* ------------ General change ------------ */
@@ -106,7 +110,6 @@ a.not-shape-links:visited {
 }
 
 /* ------------ Menu ------------ */
-/* ------ Entrée / Plat / Dessert ------ */
 .word-entree {
   font-weight: 300;
   margin: 1rem;
@@ -141,8 +144,12 @@ a.not-shape-links:visited {
   border: solid black 2px;
   box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
   transition: 0.3s;
-  -webkit-animation: sliding 1000ms 500ms backwards;
-          animation: sliding 1000ms 500ms backwards;
+  -webkit-animation: sliding 500ms 200ms backwards;
+          animation: sliding 500ms 200ms backwards;
+}
+.card-food-1__infos {
+  width: 90%;
+  padding: 0rem 1rem 0rem 1rem;
 }
 .card-food-1__infos__txt {
   font-weight: 500;
@@ -160,6 +167,17 @@ a.not-shape-links:visited {
 .card-food-1__infos__txt-and-price__price {
   font-weight: 500;
 }
+.card-food-1__icon {
+  background-color: #99E2D0;
+  visibility: collapse;
+  color: white;
+  padding: 0rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
+  transform-origin: right;
+  -webkit-animation: selected 1000ms 2000ms both;
+          animation: selected 1000ms 2000ms both;
+  font-size: xx-large;
+}
 
 .card-food-2 {
   display: flex;
@@ -171,8 +189,12 @@ a.not-shape-links:visited {
   border: solid black 2px;
   box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
   transition: 0.3s;
-  -webkit-animation: sliding 1000ms 1000ms backwards;
-          animation: sliding 1000ms 1000ms backwards;
+  -webkit-animation: sliding 500ms 400ms backwards;
+          animation: sliding 500ms 400ms backwards;
+}
+.card-food-2__infos {
+  width: 90%;
+  padding: 0rem 1rem 0rem 1rem;
 }
 .card-food-2__infos__txt {
   font-weight: 500;
@@ -190,6 +212,17 @@ a.not-shape-links:visited {
 .card-food-2__infos__txt-and-price__price {
   font-weight: 500;
 }
+.card-food-2__icon {
+  background-color: #99E2D0;
+  visibility: collapse;
+  color: white;
+  padding: 0rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
+  transform-origin: right;
+  -webkit-animation: selected 1000ms 2000ms both;
+          animation: selected 1000ms 2000ms both;
+  font-size: xx-large;
+}
 
 .card-food-3 {
   display: flex;
@@ -201,8 +234,12 @@ a.not-shape-links:visited {
   border: solid black 2px;
   box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
   transition: 0.3s;
-  -webkit-animation: sliding 1000ms 1500ms backwards;
-          animation: sliding 1000ms 1500ms backwards;
+  -webkit-animation: sliding 500ms 600ms backwards;
+          animation: sliding 500ms 600ms backwards;
+}
+.card-food-3__infos {
+  width: 90%;
+  padding: 0rem 1rem 0rem 1rem;
 }
 .card-food-3__infos__txt {
   font-weight: 500;
@@ -220,15 +257,16 @@ a.not-shape-links:visited {
 .card-food-3__infos__txt-and-price__price {
   font-weight: 500;
 }
-
-.card-food-icon {
+.card-food-3__icon {
   background-color: #99E2D0;
+  visibility: collapse;
   color: white;
-  padding: 2rem;
+  padding: 0rem;
   border-radius: 0rem 1.2rem 1.2rem 0rem;
   transform-origin: right;
-  -webkit-animation: selected 2000ms 2000ms backwards;
-          animation: selected 2000ms 2000ms backwards;
+  -webkit-animation: selected 1000ms 2000ms both;
+          animation: selected 1000ms 2000ms both;
+  font-size: xx-large;
 }
 
 /* ------------ Footer ------------ */

@@ -6,7 +6,7 @@ $border-nul: 0px;
 $font-weight-name : 500;
 $font-weight-location : 300;
 $padding-footer : 0.5rem;
-$nbm-food-francaise : 3;
+$nbm-food : 3;
 
 /* ------------ Mixins ------------ */
 
@@ -52,10 +52,12 @@ $nbm-food-francaise : 3;
 
 @keyframes selected {
     0%{
-        transform: scaleX(0);
+        transform: translateX(2rem);
+        visibility: collapse;
     }
     100%{
-        transform: scaleX(1) rotate(360deg);
+        transform: translateX(0rem);
+        visibility: visible;
     } 
 }
 
@@ -123,15 +125,13 @@ a.not-shape-links:visited{
 
 /* ------------ Menu ------------ */
 
-/* ------ Entrée / Plat / Dessert ------ */
-
 .word-entree{
     @include shape-word-menu;
 }
 .word-plat{
     @include shape-word-menu;
 }
-@for $i from 1 through $nbm-food-francaise {
+@for $i from 1 through $nbm-food {
     .card-food-#{$i} {
         @include align-hori;
         justify-content: space-between;
@@ -140,6 +140,8 @@ a.not-shape-links:visited{
         border: solid black 2px;
         @include card-shadow;
         &__infos{
+            width: 90%;
+            padding: 0rem 1rem 0rem 1rem;
             &__txt{
                 font-weight: 500;
                 padding-bottom: 0.5rem
@@ -155,16 +157,18 @@ a.not-shape-links:visited{
                 }
             }
         }
-        animation: sliding 1000ms $i*500ms backwards;
+        animation: sliding 500ms $i*200ms backwards;
+        &__icon{
+            background-color: #99E2D0;
+            visibility: collapse;
+            color: white;
+            padding: 0rem;
+            border-radius: 0rem 1.2rem 1.2rem 0rem;
+            transform-origin: right;
+            animation : selected 1000ms 2000ms both;
+            font-size: xx-large;
+        }
     }
-}
-.card-food-icon{
-    background-color: #99E2D0;
-    color: white;
-    padding: 2rem;
-    border-radius: 0rem 1.2rem 1.2rem 0rem;
-    transform-origin: right;
-    animation : selected 2000ms 2000ms backwards;
 }
 
 /* ------------ Footer ------------ */

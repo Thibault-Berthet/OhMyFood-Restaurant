@@ -10,7 +10,7 @@ $padding-footer : 0.5rem;
 /* ------------ Mixins ------------ */
 
 @mixin card-shadow {
-    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
     transition: 0.3s;
 }
 
@@ -39,14 +39,14 @@ $padding-footer : 0.5rem;
 
 /* ------------ General change ------------ */
 
-.html, body{
+.html, body, h1{
     margin: $border-nul;
     padding: $border-nul;
     font-family: 'Roboto','Shrikhand', Impact, "Arial Black", Arial, Verdana, sans-serif;
 }
 
 .bg-grey{
-    background-color: #e0e0e0;
+    background-color: #eeeded;
     padding: 2rem 0rem 2rem 0rem;
 }
 
@@ -65,13 +65,25 @@ a.not-shape-links:visited{
     font-weight: inherit;
 }
 
+a.not-shape-links-contact{
+    text-decoration: none;
+    color: white;
+}
+a.not-shape-links-contact:visited{
+    color: inherit;
+    font-weight: inherit;
+}
+h2{
+    padding: 1rem;
+}
+
 /* ------------ Location of the smartphone ------------ */
 
 .location{
-    box-shadow: 0px 2px 4px gray inset;
+    box-shadow: 0px 2px 6px gray inset;
     font-weight: 500;
     padding: 1rem;
-    background-color: #CECECE;
+    background-color: #dfdfdf;
     @include obj-center;
     &__logo{
         padding: 0px 10px 0px 10px;
@@ -81,15 +93,16 @@ a.not-shape-links:visited{
 /* ------------ Instruction ------------ */
 
 .instr-1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    padding: 0rem 3.5rem 0rem 3.5rem;
     text-align: center;
     @include obj-center;
 }
 .instr-2{
     font-size: 1rem;
     font-weight: 300;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     @include obj-center;
 }
@@ -119,15 +132,24 @@ a.not-shape-links:visited{
         position: absolute;
     }
     &__logo{
-        padding: 2rem;
+        padding: 1.5rem 1.5rem 1.5rem 1rem;
+        font-size: 1.2rem;
+        color: #797979;
+        &__restau{
+            color: #9356DC
+        }
     }
     &__order{
         @include card-shadow;
         padding-left: 1rem;
         margin-left: 0.6rem;
-        border: solid red 1px;
-        border-radius: 2rem;
+        /* border: solid red 1px; */
+        border-radius: 1rem;
         width: 90%;
+        font-weight: 500;
+        &__restau{
+            background-color: lighten($color: #9356DC, $amount: 35);
+        }
     }
 }
 
@@ -142,7 +164,7 @@ a.not-shape-links:visited{
     &__image{
         border-radius: 15px 15px 0px 0px;
         width: 100%;
-        height: 12rem;
+        height: 10rem;
         object-fit: cover;
     }
     &__sp-betw{
@@ -180,6 +202,7 @@ a.not-shape-links:visited{
     background-color: #272727;
     color : white;
     padding: 1rem;
+    margin-top: 2.5rem;
     &__logo-ohmyfood{
         font-family: 'Shrikhand','Roboto', Impact, "Arial Black", Arial, Verdana, sans-serif;
         font-size: large;
@@ -189,16 +212,22 @@ a.not-shape-links:visited{
         @include align-hori;
         padding-bottom: $padding-footer;
         &__logo{
-            padding-right: 0.6rem;
-            font-size: small
+            padding-right: 0.3rem;
+            font-size: small;
+        }
+        &__txt{
+            padding-left: 0.3rem
         }
     }
     &__became-partner{
         @include align-hori;
         padding-bottom: $padding-footer;
         &__logo{
-            padding-right: 0.5rem;
             font-size: x-small;
+            transform: rotate(-40deg);
+        }
+        &__txt{
+            padding-left: 0.5rem;
         }
     }
     &__legal-mention{
