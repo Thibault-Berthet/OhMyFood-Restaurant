@@ -1,6 +1,6 @@
 /* ------------ Code Sass de la page d'accueil du site ------------ */
-/* ------------ Variable ------------ */
-/* ------------ Mixin ------------ */
+/* ------------ Variables ------------ */
+/* ------------ Mixins ------------ */
 /* ------------ Key frames ------------ */
 /*
 @keyframes heart-full{
@@ -30,14 +30,14 @@
   justify-content: center;
 }
 
-a.passouligne {
+a.not-shape-links {
   text-decoration: none;
   color: black;
   display: flex;
   justify-content: center;
 }
 
-a.passouligne:visited {
+a.not-shape-links:visited {
   color: inherit;
   font-weight: inherit;
 }

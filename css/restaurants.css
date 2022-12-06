@@ -1,2 +1,270 @@
 @charset "UTF-8";
-/* ------------ Code Sass des différents restaurants du site ------------ *//*# sourceMappingURL=restaurants.css.map */
+/* ------------ Code Sass des différents restaurants du site ------------ */
+/* ------------ Variables ------------ */
+/* ------------ Mixins ------------ */
+/* ------------ Key frames ------------ */
+@-webkit-keyframes sliding {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes sliding {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes selected {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1) rotate(360deg);
+  }
+}
+@keyframes selected {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1) rotate(360deg);
+  }
+}
+/* ------------ General change ------------ */
+.html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", "Shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+a.not-shape-links {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+a.not-shape-links:visited {
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* ------------ Header ------------ */
+.head-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.head-align__logo {
+  padding: 1rem 3rem 1rem 3rem;
+}
+.head-align__icon {
+  font-size: x-large;
+  padding-left: 1rem;
+}
+
+/* ------------ Restaurant image and name ------------ */
+/* .restau-food{
+    width: 100%;
+    position: relative;
+} */
+.image-bg {
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
+  background-size: cover;
+  height: 15rem;
+  width: 100%;
+}
+
+.restau-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 2rem 1rem;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  transform: translateY(-2rem);
+  background-color: white;
+}
+.restau-name__txt {
+  font-family: "Shrikhand", "Roboto", Impact, "Arial Black", Arial, Verdana, sans-serif;
+  font-size: x-large;
+}
+.restau-name__icon {
+  font-size: x-large;
+  color: #c4c4c4;
+}
+
+/* ------------ Menu ------------ */
+/* ------ Entrée / Plat / Dessert ------ */
+.word-entree {
+  font-weight: 300;
+  margin: 1rem;
+  padding-bottom: 0.4rem;
+}
+.word-entree__underline {
+  border-bottom: solid #99E2D0 3px;
+  padding-bottom: 0.4rem;
+  position: absolute;
+  width: 10%;
+}
+
+.word-plat {
+  font-weight: 300;
+  margin: 1rem;
+  padding-bottom: 0.4rem;
+}
+.word-plat__underline {
+  border-bottom: solid #99E2D0 3px;
+  padding-bottom: 0.4rem;
+  position: absolute;
+  width: 10%;
+}
+
+.card-food-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  border-radius: 1.2rem;
+  border: solid black 2px;
+  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  -webkit-animation: sliding 1000ms 500ms backwards;
+          animation: sliding 1000ms 500ms backwards;
+}
+.card-food-1__infos__txt {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.card-food-1__infos__txt-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-food-1__infos__txt-and-price__txt {
+  font-weight: 300;
+}
+.card-food-1__infos__txt-and-price__price {
+  font-weight: 500;
+}
+
+.card-food-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  border-radius: 1.2rem;
+  border: solid black 2px;
+  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  -webkit-animation: sliding 1000ms 1000ms backwards;
+          animation: sliding 1000ms 1000ms backwards;
+}
+.card-food-2__infos__txt {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.card-food-2__infos__txt-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-food-2__infos__txt-and-price__txt {
+  font-weight: 300;
+}
+.card-food-2__infos__txt-and-price__price {
+  font-weight: 500;
+}
+
+.card-food-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  border-radius: 1.2rem;
+  border: solid black 2px;
+  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  -webkit-animation: sliding 1000ms 1500ms backwards;
+          animation: sliding 1000ms 1500ms backwards;
+}
+.card-food-3__infos__txt {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.card-food-3__infos__txt-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-food-3__infos__txt-and-price__txt {
+  font-weight: 300;
+}
+.card-food-3__infos__txt-and-price__price {
+  font-weight: 500;
+}
+
+.card-food-icon {
+  background-color: #99E2D0;
+  color: white;
+  padding: 2rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
+  transform-origin: right;
+  -webkit-animation: selected 2000ms 2000ms backwards;
+          animation: selected 2000ms 2000ms backwards;
+}
+
+/* ------------ Footer ------------ */
+.foot {
+  background-color: #272727;
+  color: white;
+  padding: 1rem;
+}
+.foot__logo-ohmyfood {
+  font-family: "Shrikhand", "Roboto", Impact, "Arial Black", Arial, Verdana, sans-serif;
+  font-size: large;
+  padding-bottom: 1rem;
+}
+.foot__restaurant-proposal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+.foot__restaurant-proposal__logo {
+  padding-right: 0.6rem;
+  font-size: small;
+}
+.foot__became-partner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+.foot__became-partner__logo {
+  padding-right: 0.5rem;
+  font-size: x-small;
+}
+.foot__legal-mention {
+  padding-bottom: 0.5rem;
+}
+.foot__contact {
+  padding-bottom: 0.5rem;
+}/*# sourceMappingURL=restaurants.css.map */

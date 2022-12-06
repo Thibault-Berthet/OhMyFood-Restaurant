@@ -1,13 +1,13 @@
 /* ------------ Code Sass de la page d'accueil du site ------------ */
 
-/* ------------ Variable ------------ */
+/* ------------ Variables ------------ */
 
 $border-nul: 0px;
 $font-weight-name : 500;
 $font-weight-location : 300;
 $padding-footer : 0.5rem;
 
-/* ------------ Mixin ------------ */
+/* ------------ Mixins ------------ */
 
 @mixin card-shadow {
     box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
@@ -55,12 +55,12 @@ $padding-footer : 0.5rem;
     @include obj-center;
 }
 
-a.passouligne{
+a.not-shape-links{
     text-decoration: none;
     color: black;
     @include obj-center;
 }
-a.passouligne:visited{
+a.not-shape-links:visited{
     color: inherit;
     font-weight: inherit;
 }
@@ -192,9 +192,6 @@ a.passouligne:visited{
             padding-right: 0.6rem;
             font-size: small
         }
-        &__txt{
-            
-        }
     }
     &__became-partner{
         @include align-hori;
@@ -202,9 +199,6 @@ a.passouligne:visited{
         &__logo{
             padding-right: 0.5rem;
             font-size: x-small;
-        }
-        &__txt{
-
         }
     }
     &__legal-mention{
