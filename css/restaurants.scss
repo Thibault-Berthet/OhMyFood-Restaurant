@@ -11,7 +11,7 @@ $nbm-food : 3;
 /* ------------ Mixins ------------ */
 
 @mixin card-shadow {
-    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
     transition: 0.3s;
 }
 
@@ -52,13 +52,26 @@ $nbm-food : 3;
 
 @keyframes selected {
     0%{
-        transform: translateX(2rem);
+        transform: translateX(5rem);
         visibility: collapse;
+    }
+    50%{
+        transform: translate(2.5rem);
+        visibility: visible;
     }
     100%{
         transform: translateX(0rem);
         visibility: visible;
     } 
+}
+
+@keyframes rotation-icon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
 }
 
 
@@ -75,6 +88,14 @@ a.not-shape-links{
     @include obj-center;
 }
 a.not-shape-links:visited{
+    color: inherit;
+    font-weight: inherit;
+}
+a.not-shape-links-contact{
+    text-decoration: none;
+    color: white;
+}
+a.not-shape-links-contact:visited{
     color: inherit;
     font-weight: inherit;
 }
@@ -136,12 +157,11 @@ a.not-shape-links:visited{
         @include align-hori;
         justify-content: space-between;
         margin: 0.5rem;
-        border-radius: 1.2rem;
-        border: solid black 2px;
+        border-radius: 1rem;
         @include card-shadow;
         &__infos{
             width: 90%;
-            padding: 0rem 1rem 0rem 1rem;
+            padding: 0.5rem 1rem 0.5rem 1rem;
             &__txt{
                 font-weight: 500;
                 padding-bottom: 0.5rem
@@ -158,18 +178,23 @@ a.not-shape-links:visited{
             }
         }
         animation: sliding 500ms $i*200ms backwards;
-        &__icon{
+        &__checked{
             background-color: #99E2D0;
-            visibility: collapse;
-            color: white;
-            padding: 0rem;
-            border-radius: 0rem 1.2rem 1.2rem 0rem;
-            transform-origin: right;
-            animation : selected 1000ms 2000ms both;
-            font-size: xx-large;
+            animation: selected 4000ms $i*1000ms linear both;
+            border-radius: 0rem 1rem 1rem 0rem;
+            padding: 1.5rem;
+            transform-origin: 100px 100px;
+            &__icon{
+                color: white;
+                transform-origin: center;
+                animation : rotation-icon 500ms $i*1000ms linear both;
+                font-size: large;
+            }
         }
     }
 }
+
+
 
 /* ------------ Footer ------------ */
 
@@ -177,6 +202,7 @@ a.not-shape-links:visited{
     background-color: #272727;
     color : white;
     padding: 1rem;
+    margin-top: 2.5rem;
     &__logo-ohmyfood{
         font-family: 'Shrikhand','Roboto', Impact, "Arial Black", Arial, Verdana, sans-serif;
         font-size: large;
@@ -186,16 +212,22 @@ a.not-shape-links:visited{
         @include align-hori;
         padding-bottom: $padding-footer;
         &__logo{
-            padding-right: 0.6rem;
-            font-size: small
+            padding-right: 0.3rem;
+            font-size: small;
+        }
+        &__txt{
+            padding-left: 0.3rem
         }
     }
     &__became-partner{
         @include align-hori;
         padding-bottom: $padding-footer;
         &__logo{
-            padding-right: 0.5rem;
             font-size: x-small;
+            transform: rotate(-40deg);
+        }
+        &__txt{
+            padding-left: 0.5rem;
         }
     }
     &__legal-mention{

@@ -25,8 +25,12 @@
 }
 @-webkit-keyframes selected {
   0% {
-    transform: translateX(2rem);
+    transform: translateX(5rem);
     visibility: collapse;
+  }
+  50% {
+    transform: translate(2.5rem);
+    visibility: visible;
   }
   100% {
     transform: translateX(0rem);
@@ -35,12 +39,32 @@
 }
 @keyframes selected {
   0% {
-    transform: translateX(2rem);
+    transform: translateX(5rem);
     visibility: collapse;
+  }
+  50% {
+    transform: translate(2.5rem);
+    visibility: visible;
   }
   100% {
     transform: translateX(0rem);
     visibility: visible;
+  }
+}
+@-webkit-keyframes rotation-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /* ------------ General change ------------ */
@@ -58,6 +82,16 @@ a.not-shape-links {
 }
 
 a.not-shape-links:visited {
+  color: inherit;
+  font-weight: inherit;
+}
+
+a.not-shape-links-contact {
+  text-decoration: none;
+  color: white;
+}
+
+a.not-shape-links-contact:visited {
   color: inherit;
   font-weight: inherit;
 }
@@ -140,16 +174,15 @@ a.not-shape-links:visited {
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem;
-  border-radius: 1.2rem;
-  border: solid black 2px;
-  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
   -webkit-animation: sliding 500ms 200ms backwards;
           animation: sliding 500ms 200ms backwards;
 }
 .card-food-1__infos {
   width: 90%;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .card-food-1__infos__txt {
   font-weight: 500;
@@ -167,16 +200,20 @@ a.not-shape-links:visited {
 .card-food-1__infos__txt-and-price__price {
   font-weight: 500;
 }
-.card-food-1__icon {
+.card-food-1__checked {
   background-color: #99E2D0;
-  visibility: collapse;
+  -webkit-animation: selected 4000ms 1000ms linear both;
+          animation: selected 4000ms 1000ms linear both;
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 1.5rem;
+  transform-origin: 100px 100px;
+}
+.card-food-1__checked__icon {
   color: white;
-  padding: 0rem;
-  border-radius: 0rem 1.2rem 1.2rem 0rem;
-  transform-origin: right;
-  -webkit-animation: selected 1000ms 2000ms both;
-          animation: selected 1000ms 2000ms both;
-  font-size: xx-large;
+  transform-origin: center;
+  -webkit-animation: rotation-icon 500ms 1000ms linear both;
+          animation: rotation-icon 500ms 1000ms linear both;
+  font-size: large;
 }
 
 .card-food-2 {
@@ -185,16 +222,15 @@ a.not-shape-links:visited {
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem;
-  border-radius: 1.2rem;
-  border: solid black 2px;
-  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
   -webkit-animation: sliding 500ms 400ms backwards;
           animation: sliding 500ms 400ms backwards;
 }
 .card-food-2__infos {
   width: 90%;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .card-food-2__infos__txt {
   font-weight: 500;
@@ -212,16 +248,20 @@ a.not-shape-links:visited {
 .card-food-2__infos__txt-and-price__price {
   font-weight: 500;
 }
-.card-food-2__icon {
+.card-food-2__checked {
   background-color: #99E2D0;
-  visibility: collapse;
+  -webkit-animation: selected 4000ms 2000ms linear both;
+          animation: selected 4000ms 2000ms linear both;
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 1.5rem;
+  transform-origin: 100px 100px;
+}
+.card-food-2__checked__icon {
   color: white;
-  padding: 0rem;
-  border-radius: 0rem 1.2rem 1.2rem 0rem;
-  transform-origin: right;
-  -webkit-animation: selected 1000ms 2000ms both;
-          animation: selected 1000ms 2000ms both;
-  font-size: xx-large;
+  transform-origin: center;
+  -webkit-animation: rotation-icon 500ms 2000ms linear both;
+          animation: rotation-icon 500ms 2000ms linear both;
+  font-size: large;
 }
 
 .card-food-3 {
@@ -230,16 +270,15 @@ a.not-shape-links:visited {
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem;
-  border-radius: 1.2rem;
-  border: solid black 2px;
-  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
   -webkit-animation: sliding 500ms 600ms backwards;
           animation: sliding 500ms 600ms backwards;
 }
 .card-food-3__infos {
   width: 90%;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .card-food-3__infos__txt {
   font-weight: 500;
@@ -257,16 +296,20 @@ a.not-shape-links:visited {
 .card-food-3__infos__txt-and-price__price {
   font-weight: 500;
 }
-.card-food-3__icon {
+.card-food-3__checked {
   background-color: #99E2D0;
-  visibility: collapse;
+  -webkit-animation: selected 4000ms 3000ms linear both;
+          animation: selected 4000ms 3000ms linear both;
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 1.5rem;
+  transform-origin: 100px 100px;
+}
+.card-food-3__checked__icon {
   color: white;
-  padding: 0rem;
-  border-radius: 0rem 1.2rem 1.2rem 0rem;
-  transform-origin: right;
-  -webkit-animation: selected 1000ms 2000ms both;
-          animation: selected 1000ms 2000ms both;
-  font-size: xx-large;
+  transform-origin: center;
+  -webkit-animation: rotation-icon 500ms 3000ms linear both;
+          animation: rotation-icon 500ms 3000ms linear both;
+  font-size: large;
 }
 
 /* ------------ Footer ------------ */
@@ -274,6 +317,7 @@ a.not-shape-links:visited {
   background-color: #272727;
   color: white;
   padding: 1rem;
+  margin-top: 2.5rem;
 }
 .foot__logo-ohmyfood {
   font-family: "Shrikhand", "Roboto", Impact, "Arial Black", Arial, Verdana, sans-serif;
@@ -287,8 +331,11 @@ a.not-shape-links:visited {
   padding-bottom: 0.5rem;
 }
 .foot__restaurant-proposal__logo {
-  padding-right: 0.6rem;
+  padding-right: 0.3rem;
   font-size: small;
+}
+.foot__restaurant-proposal__txt {
+  padding-left: 0.3rem;
 }
 .foot__became-partner {
   display: flex;
@@ -297,8 +344,11 @@ a.not-shape-links:visited {
   padding-bottom: 0.5rem;
 }
 .foot__became-partner__logo {
-  padding-right: 0.5rem;
   font-size: x-small;
+  transform: rotate(-40deg);
+}
+.foot__became-partner__txt {
+  padding-left: 0.5rem;
 }
 .foot__legal-mention {
   padding-bottom: 0.5rem;

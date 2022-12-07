@@ -2,16 +2,54 @@
 /* ------------ Variables ------------ */
 /* ------------ Mixins ------------ */
 /* ------------ Key frames ------------ */
-/*
-@keyframes heart-full{
-    from{
-        transform: scaleY(0);
-    }
-    to{
-        transform: scaleY(1);
-    }
+@-webkit-keyframes bg-white {
+  0% {
+    z-index: 10;
+    opacity: 1;
+  }
+  20% {
+    z-index: 10;
+    opacity: 1;
+  }
+  100% {
+    visibility: collapse;
+    z-index: 0;
+    opacity: 0;
+  }
 }
-*/
+@keyframes bg-white {
+  0% {
+    z-index: 10;
+    opacity: 1;
+  }
+  20% {
+    z-index: 10;
+    opacity: 1;
+  }
+  100% {
+    visibility: collapse;
+    z-index: 0;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: collapse;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: collapse;
+  }
+}
 /* ------------ General change ------------ */
 .html, body, h1 {
   margin: 0px;
@@ -54,6 +92,25 @@ a.not-shape-links-contact:visited {
 
 h2 {
   padding: 1rem;
+}
+
+/* ------------ Spinner for loading ------------ */
+.loading-spin {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: bg-white 2s linear both;
+          animation: bg-white 2s linear both;
+}
+.loading-spin__arrow {
+  color: #c968db;
+  font-size: 5rem;
+  -webkit-animation: loading 1s linear infinite both;
+          animation: loading 1s linear infinite both;
 }
 
 /* ------------ Location of the smartphone ------------ */
@@ -104,6 +161,8 @@ h2 {
 .navi:hover {
   background-color: #d07de0;
   /*background: linear-gradient(to bottom right,#ff86de,#9e67df);*/
+  box-shadow: 4px 4px 8px 0 rgb(146, 146, 146);
+  transition: 0.3s;
 }
 
 .fonct {
