@@ -143,16 +143,15 @@ h2{
     border-radius: 15rem;
     margin: 0rem 5rem 0rem 5rem;
     color: white;
-    /*background: linear-gradient(to bottom right,#FF79DA,#9356DC);*/
-    background-color: #c968db;
-    transition: 400ms;
+    background: linear-gradient(to bottom right,#FF79DA,#9356DC);
+    /* background-color: #c968db; */
+    transition: all 400ms;
     @include card-shadow;
     @include obj-center;
     &:hover{
-        background-color: lighten($color: #c968db, $amount: 5);
-        /*background: linear-gradient(to bottom right,#ff86de,#9e67df);*/
+        // background-color: lighten($color: #c968db, $amount: 5);
+        background: linear-gradient(to bottom right,#ff86de,#9e67df);
         box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 1);
-        transition: 0.3s;
     }
 }
 .fonct{
@@ -221,10 +220,14 @@ h2{
             font-size: x-large;
             height: 100%;
             width: 100%;
-            color: #c4c4c4;
-            transition: 400ms;
+            color: black;
+            transition: all 3000ms;
             &:hover{
-                color: #c968db;
+                background: linear-gradient(to bottom left,#9e67df,#ff86de);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                // background: linear-gradient(to bottom left,#ff86de,#9e67df);
+                font-weight: bold;
             }
         }
     }

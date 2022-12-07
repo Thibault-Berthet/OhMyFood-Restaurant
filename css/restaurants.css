@@ -23,34 +23,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes selected {
-  0% {
-    transform: translateX(5rem);
-    visibility: collapse;
-  }
-  50% {
-    transform: translate(2.5rem);
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(0rem);
-    visibility: visible;
-  }
-}
-@keyframes selected {
-  0% {
-    transform: translateX(5rem);
-    visibility: collapse;
-  }
-  50% {
-    transform: translate(2.5rem);
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(0rem);
-    visibility: visible;
-  }
-}
 @-webkit-keyframes rotation-icon {
   0% {
     transform: rotate(0deg);
@@ -176,13 +148,15 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: 0.3s;
+  transition: all 0.3s;
+  height: 75px;
   -webkit-animation: sliding 500ms 200ms backwards;
           animation: sliding 500ms 200ms backwards;
 }
 .card-food-1__infos {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s;
 }
 .card-food-1__infos__txt {
   font-weight: 500;
@@ -202,18 +176,29 @@ a.not-shape-links-contact:visited {
 }
 .card-food-1__checked {
   background-color: #99E2D0;
-  -webkit-animation: selected 4000ms 1000ms linear both;
-          animation: selected 4000ms 1000ms linear both;
   border-radius: 0rem 1rem 1rem 0rem;
-  padding: 1.5rem;
-  transform-origin: 100px 100px;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 .card-food-1__checked__icon {
   color: white;
   transform-origin: center;
-  -webkit-animation: rotation-icon 500ms 1000ms linear both;
-          animation: rotation-icon 500ms 1000ms linear both;
   font-size: large;
+}
+.card-food-1:hover .card-food-1__checked {
+  width: 20%;
+}
+.card-food-1:hover .card-food-1__checked__icon {
+  -webkit-animation: rotation-icon 300ms linear both;
+          animation: rotation-icon 300ms linear both;
+}
+.card-food-1:hover .card-food-1__infos {
+  width: 80%;
 }
 
 .card-food-2 {
@@ -224,13 +209,15 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: 0.3s;
+  transition: all 0.3s;
+  height: 75px;
   -webkit-animation: sliding 500ms 400ms backwards;
           animation: sliding 500ms 400ms backwards;
 }
 .card-food-2__infos {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s;
 }
 .card-food-2__infos__txt {
   font-weight: 500;
@@ -250,18 +237,29 @@ a.not-shape-links-contact:visited {
 }
 .card-food-2__checked {
   background-color: #99E2D0;
-  -webkit-animation: selected 4000ms 2000ms linear both;
-          animation: selected 4000ms 2000ms linear both;
   border-radius: 0rem 1rem 1rem 0rem;
-  padding: 1.5rem;
-  transform-origin: 100px 100px;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 .card-food-2__checked__icon {
   color: white;
   transform-origin: center;
-  -webkit-animation: rotation-icon 500ms 2000ms linear both;
-          animation: rotation-icon 500ms 2000ms linear both;
   font-size: large;
+}
+.card-food-2:hover .card-food-2__checked {
+  width: 20%;
+}
+.card-food-2:hover .card-food-2__checked__icon {
+  -webkit-animation: rotation-icon 300ms linear both;
+          animation: rotation-icon 300ms linear both;
+}
+.card-food-2:hover .card-food-2__infos {
+  width: 80%;
 }
 
 .card-food-3 {
@@ -272,13 +270,15 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: 0.3s;
+  transition: all 0.3s;
+  height: 75px;
   -webkit-animation: sliding 500ms 600ms backwards;
           animation: sliding 500ms 600ms backwards;
 }
 .card-food-3__infos {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s;
 }
 .card-food-3__infos__txt {
   font-weight: 500;
@@ -298,18 +298,29 @@ a.not-shape-links-contact:visited {
 }
 .card-food-3__checked {
   background-color: #99E2D0;
-  -webkit-animation: selected 4000ms 3000ms linear both;
-          animation: selected 4000ms 3000ms linear both;
   border-radius: 0rem 1rem 1rem 0rem;
-  padding: 1.5rem;
-  transform-origin: 100px 100px;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 .card-food-3__checked__icon {
   color: white;
   transform-origin: center;
-  -webkit-animation: rotation-icon 500ms 3000ms linear both;
-          animation: rotation-icon 500ms 3000ms linear both;
   font-size: large;
+}
+.card-food-3:hover .card-food-3__checked {
+  width: 20%;
+}
+.card-food-3:hover .card-food-3__checked__icon {
+  -webkit-animation: rotation-icon 300ms linear both;
+          animation: rotation-icon 300ms linear both;
+}
+.card-food-3:hover .card-food-3__infos {
+  width: 80%;
 }
 
 /* ------------ Footer ------------ */

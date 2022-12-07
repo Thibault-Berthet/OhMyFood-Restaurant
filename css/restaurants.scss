@@ -12,7 +12,7 @@ $nbm-food : 3;
 
 @mixin card-shadow {
     box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 @mixin obj-center {
@@ -50,20 +50,20 @@ $nbm-food : 3;
     }
 }
 
-@keyframes selected {
-    0%{
-        transform: translateX(5rem);
-        visibility: collapse;
-    }
-    50%{
-        transform: translate(2.5rem);
-        visibility: visible;
-    }
-    100%{
-        transform: translateX(0rem);
-        visibility: visible;
-    } 
-}
+// @keyframes selected {
+//     0%{
+//         transform: translateX(5rem);
+//         visibility: collapse;
+//     }
+//     50%{
+//         transform: translate(2.5rem);
+//         visibility: visible;
+//     }
+//     100%{
+//         transform: translateX(0rem);
+//         visibility: visible;
+//     } 
+// }
 
 @keyframes rotation-icon {
     0%{
@@ -159,9 +159,11 @@ a.not-shape-links-contact:visited{
         margin: 0.5rem;
         border-radius: 1rem;
         @include card-shadow;
+        height: 75px;
         &__infos{
-            width: 90%;
+            width: 100%;
             padding: 0.5rem 1rem 0.5rem 1rem;
+            transition: all 0.3s;
             &__txt{
                 font-weight: 500;
                 padding-bottom: 0.5rem
@@ -180,15 +182,29 @@ a.not-shape-links-contact:visited{
         animation: sliding 500ms $i*200ms backwards;
         &__checked{
             background-color: #99E2D0;
-            animation: selected 4000ms $i*1000ms linear both;
+            // animation: selected 4000ms $i*1000ms linear both;
             border-radius: 0rem 1rem 1rem 0rem;
-            padding: 1.5rem;
-            transform-origin: 100px 100px;
+            width: 0%;
+            height: 100%;
+            overflow: hidden;
+            @include obj-center;
+            align-items: center;
+            transition: all 0.3s;
             &__icon{
                 color: white;
                 transform-origin: center;
-                animation : rotation-icon 500ms $i*1000ms linear both;
                 font-size: large;
+            }
+        }
+        &:hover{
+            .card-food-#{$i}__checked{
+                width: 20%;
+                &__icon{
+                    animation : rotation-icon 300ms linear both;
+                }
+            }
+            .card-food-#{$i}__infos{
+                width: 80%;
             }
         }
     }
