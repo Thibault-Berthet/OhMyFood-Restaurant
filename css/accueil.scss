@@ -97,6 +97,9 @@ $arrow-color : #c968db;
 .bg-grey{
     background-color: #ededed;
     padding: 2rem 0rem 2rem 0rem;
+    @media (min-width: 1024px) {
+      margin: 0% 30% 0% 30%;
+    }
 }
 
 .logo{
@@ -149,6 +152,9 @@ h2{
     padding: 1rem;
     background-color: #dfdfdf;
     @include obj-center;
+    @media (min-width: 1024px) {
+        margin: 0% 30% 0% 30%;
+    }
     &__logo{
         padding: 0px 10px 0px 10px;
     }
@@ -189,9 +195,20 @@ h2{
 .bg-fonct{
     margin-bottom: 2.5rem;
 }
+.responsive-fonct{
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+}
 .fonct{
     padding: 1rem;
     @include align-hori;
+    @media (min-width: 1024px) {
+        padding: 2rem;
+    }
     &__nmbr-form{
         color: white;
         background-color: $primary-color;
@@ -215,6 +232,9 @@ h2{
         border-radius: 1rem;
         width: 90%;
         font-weight: 500;
+        @media (min-width: 1024px) {
+            padding: 0.5rem 1rem 0.5rem 1rem;
+        }
         &__restau{
             background-color: lighten($color: $primary-color, $amount: 35);
         }
@@ -234,7 +254,7 @@ h2{
     @include card-shadow;
     &__new{
         position: absolute;
-        left: 15rem;
+        right: 1rem;
         top: 1rem;
         background-color: $tertiary-color;
         color: darken($tertiary-color, $amount: 45);

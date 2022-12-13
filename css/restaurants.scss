@@ -216,7 +216,7 @@ a.not-shape-links-contact:visited{
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
-                    max-width: 82%;
+                    width: 82%;
                 }
                 &__price{
                     font-weight: 500;
@@ -233,7 +233,7 @@ a.not-shape-links-contact:visited{
             overflow: hidden;
             @include obj-center;
             align-items: center;
-            transition: all 1s linear;
+            transition: all 550ms linear;
             &__icon{
                 color: white;
                 transform-origin: center;
@@ -242,13 +242,13 @@ a.not-shape-links-contact:visited{
         }
         &:hover{
             .card-food-#{$i}__checked{
-                width: 30%;
+                width: 20%;
                 &__icon{
-                    animation : rotation-icon 450ms linear both;
+                    animation : rotation-icon 500ms linear both;
                 }
             }
             .card-food-#{$i}__infos{
-                width: 70%;
+                width: 80%;
             }
         }
     }

@@ -249,7 +249,7 @@ a.not-shape-links-contact:visited {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 82%;
+  width: 82%;
 }
 .card-food-1__infos__txt-and-price__price {
   font-weight: 500;
@@ -263,7 +263,7 @@ a.not-shape-links-contact:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s linear;
+  transition: all 550ms linear;
 }
 .card-food-1__checked__icon {
   color: white;
@@ -271,14 +271,14 @@ a.not-shape-links-contact:visited {
   font-size: x-large;
 }
 .card-food-1:hover .card-food-1__checked {
-  width: 30%;
+  width: 20%;
 }
 .card-food-1:hover .card-food-1__checked__icon {
-  -webkit-animation: rotation-icon 450ms linear both;
-          animation: rotation-icon 450ms linear both;
+  -webkit-animation: rotation-icon 500ms linear both;
+          animation: rotation-icon 500ms linear both;
 }
 .card-food-1:hover .card-food-1__infos {
-  width: 70%;
+  width: 80%;
 }
 
 .card-food-2 {
@@ -314,7 +314,7 @@ a.not-shape-links-contact:visited {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 82%;
+  width: 82%;
 }
 .card-food-2__infos__txt-and-price__price {
   font-weight: 500;
@@ -328,7 +328,7 @@ a.not-shape-links-contact:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s linear;
+  transition: all 550ms linear;
 }
 .card-food-2__checked__icon {
   color: white;
@@ -336,14 +336,14 @@ a.not-shape-links-contact:visited {
   font-size: x-large;
 }
 .card-food-2:hover .card-food-2__checked {
-  width: 30%;
+  width: 20%;
 }
 .card-food-2:hover .card-food-2__checked__icon {
-  -webkit-animation: rotation-icon 450ms linear both;
-          animation: rotation-icon 450ms linear both;
+  -webkit-animation: rotation-icon 500ms linear both;
+          animation: rotation-icon 500ms linear both;
 }
 .card-food-2:hover .card-food-2__infos {
-  width: 70%;
+  width: 80%;
 }
 
 .card-food-3 {
@@ -379,7 +379,7 @@ a.not-shape-links-contact:visited {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 82%;
+  width: 82%;
 }
 .card-food-3__infos__txt-and-price__price {
   font-weight: 500;
@@ -393,7 +393,7 @@ a.not-shape-links-contact:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s linear;
+  transition: all 550ms linear;
 }
 .card-food-3__checked__icon {
   color: white;
@@ -401,14 +401,14 @@ a.not-shape-links-contact:visited {
   font-size: x-large;
 }
 .card-food-3:hover .card-food-3__checked {
-  width: 30%;
+  width: 20%;
 }
 .card-food-3:hover .card-food-3__checked__icon {
-  -webkit-animation: rotation-icon 450ms linear both;
-          animation: rotation-icon 450ms linear both;
+  -webkit-animation: rotation-icon 500ms linear both;
+          animation: rotation-icon 500ms linear both;
 }
 .card-food-3:hover .card-food-3__infos {
-  width: 70%;
+  width: 80%;
 }
 
 /* ------------ Footer ------------ */

@@ -125,6 +125,11 @@
   background-color: #ededed;
   padding: 2rem 0rem 2rem 0rem;
 }
+@media (min-width: 1024px) {
+  .bg-grey {
+    margin: 0% 30% 0% 30%;
+  }
+}
 
 .logo {
   padding: 1rem;
@@ -186,6 +191,11 @@ h2 {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 1024px) {
+  .location {
+    margin: 0% 30% 0% 30%;
+  }
+}
 .location__logo {
   padding: 0px 10px 0px 10px;
 }
@@ -231,11 +241,25 @@ h2 {
   margin-bottom: 2.5rem;
 }
 
+@media (min-width: 1024px) {
+  .responsive-fonct {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 .fonct {
   padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .fonct {
+    padding: 2rem;
+  }
 }
 .fonct__nmbr-form {
   color: white;
@@ -262,6 +286,11 @@ h2 {
   width: 90%;
   font-weight: 500;
 }
+@media (min-width: 1024px) {
+  .fonct__order {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
 .fonct__order__restau {
   background-color: #f2eafb;
 }
@@ -282,7 +311,7 @@ h2 {
 }
 .card-restau__new {
   position: absolute;
-  left: 15rem;
+  right: 1rem;
   top: 1rem;
   background-color: #99E2D0;
   color: #217460;
