@@ -7,6 +7,10 @@ $font-weight-name : 500;
 $font-weight-location : 300;
 $padding-footer : 0.5rem;
 $loading-duration : 2s;
+$primary-color : #9356DC;
+$secondary-color : #FF79DA;
+$tertiary-color : #99E2D0;
+$arrow-color : #c968db;
 
 /* ------------ Mixins ------------ */
 
@@ -24,6 +28,11 @@ $loading-duration : 2s;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+@mixin bg-color {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ------------ Key frames ------------ */
@@ -54,6 +63,29 @@ $loading-duration : 2s;
     }
 }
 
+@keyframes heart-full {
+    0%{
+        background: linear-gradient(to top, #c968db 5%, white 5%);
+        @include bg-color();
+    }
+    25%{
+        background: linear-gradient(to top, #c968db 25%, white 25%);
+        @include bg-color();
+    }
+    50%{
+        background: linear-gradient(to top, #c968db 50%, white 50%);
+        @include bg-color();
+    }
+    75%{
+        background: linear-gradient(to top, #c968db 75%, white 75%);
+        @include bg-color();
+    }
+    100%{
+        background: linear-gradient(to bottom left,#9e67df,#ff86de);
+        @include bg-color();
+    }
+}
+
 /* ------------ General change ------------ */
 
 .html, body, h1{
@@ -63,7 +95,7 @@ $loading-duration : 2s;
 }
 
 .bg-grey{
-    background-color: #eeeded;
+    background-color: #ededed;
     padding: 2rem 0rem 2rem 0rem;
 }
 
@@ -91,12 +123,12 @@ a.not-shape-links-contact:visited{
     font-weight: inherit;
 }
 h2{
-    padding: 1rem;
+    padding: 2.5rem 1rem 0rem 1rem;
 }
 
 /* ------------ Spinner for loading ------------ */
 .loading-spin{
-    position:absolute;
+    position: absolute;
     background-color: white;
     @include obj-center;
     align-items: center;
@@ -104,7 +136,7 @@ h2{
     height: 100%;
     animation: bg-white $loading-duration linear both;
     &__arrow{
-        color: #c968db;
+        color: $arrow-color;
         font-size: 5rem;
         animation: loading 1s linear infinite both;
     }
@@ -143,7 +175,7 @@ h2{
     border-radius: 15rem;
     margin: 0rem 5rem 0rem 5rem;
     color: white;
-    background: linear-gradient(to bottom right,#FF79DA,#9356DC);
+    background: linear-gradient(to bottom right,$secondary-color,$primary-color);
     /* background-color: #c968db; */
     transition: all 400ms;
     @include card-shadow;
@@ -154,12 +186,15 @@ h2{
         box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 1);
     }
 }
+.bg-fonct{
+    margin-bottom: 2.5rem;
+}
 .fonct{
     padding: 1rem;
     @include align-hori;
     &__nmbr-form{
         color: white;
-        background-color: #9356DC;
+        background-color: $primary-color;
         border-radius: 15rem;
         padding: 0.2rem 0.5rem 0.2rem 0.5rem;
         position: absolute;
@@ -169,7 +204,7 @@ h2{
         font-size: 1.2rem;
         color: #797979;
         &__restau{
-            color: #9356DC
+            color: $primary-color;
         }
     }
     &__order{
@@ -181,19 +216,35 @@ h2{
         width: 90%;
         font-weight: 500;
         &__restau{
-            background-color: lighten($color: #9356DC, $amount: 35);
+            background-color: lighten($color: $primary-color, $amount: 35);
         }
     }
 }
 
 /* ------------ Restaurants ------------ */
-
+.bg-restau{
+    background-color: #ededed;
+}
 .card-restau{
     background-color: white;
     border-radius: 15px;
     margin-bottom: 30px;
     width: 90%;
+    position: relative;
     @include card-shadow;
+    &__new{
+        position: absolute;
+        left: 15rem;
+        top: 1rem;
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, $amount: 45);
+        border-radius: 0.1rem;
+        height: 1rem;
+        padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        z-index: 1;
+    }
     &__image{
         border-radius: 15px 15px 0px 0px;
         width: 100%;
@@ -221,12 +272,11 @@ h2{
             height: 100%;
             width: 100%;
             color: black;
-            transition: all 3000ms;
+            transition: all 500ms;
             &:hover{
-                background: linear-gradient(to bottom left,#9e67df,#ff86de);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                // background: linear-gradient(to bottom left,#ff86de,#9e67df);
+                // background: linear-gradient(to bottom left,#9e67df,#ff86de);
+                animation: heart-full 500ms linear forwards;
+                @include bg-color();
                 font-weight: bold;
             }
         }

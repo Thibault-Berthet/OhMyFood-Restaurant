@@ -50,6 +50,70 @@
     visibility: collapse;
   }
 }
+@-webkit-keyframes heart-full {
+  0% {
+    background: linear-gradient(to top, #c968db 5%, white 5%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: linear-gradient(to top, #c968db 25%, white 25%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(to top, #c968db 50%, white 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: linear-gradient(to top, #c968db 75%, white 75%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to bottom left, #9e67df, #ff86de);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes heart-full {
+  0% {
+    background: linear-gradient(to top, #c968db 5%, white 5%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: linear-gradient(to top, #c968db 25%, white 25%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(to top, #c968db 50%, white 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: linear-gradient(to top, #c968db 75%, white 75%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to bottom left, #9e67df, #ff86de);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 /* ------------ General change ------------ */
 .html, body, h1 {
   margin: 0px;
@@ -58,7 +122,7 @@
 }
 
 .bg-grey {
-  background-color: #eeeded;
+  background-color: #ededed;
   padding: 2rem 0rem 2rem 0rem;
 }
 
@@ -91,7 +155,7 @@ a.not-shape-links-contact:visited {
 }
 
 h2 {
-  padding: 1rem;
+  padding: 2.5rem 1rem 0rem 1rem;
 }
 
 /* ------------ Spinner for loading ------------ */
@@ -163,6 +227,10 @@ h2 {
   box-shadow: 4px 4px 8px 0 rgb(146, 146, 146);
 }
 
+.bg-fonct {
+  margin-bottom: 2.5rem;
+}
+
 .fonct {
   padding: 1rem;
   display: flex;
@@ -199,13 +267,31 @@ h2 {
 }
 
 /* ------------ Restaurants ------------ */
+.bg-restau {
+  background-color: #ededed;
+}
+
 .card-restau {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 30px;
   width: 90%;
+  position: relative;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
+}
+.card-restau__new {
+  position: absolute;
+  left: 15rem;
+  top: 1rem;
+  background-color: #99E2D0;
+  color: #217460;
+  border-radius: 0.1rem;
+  height: 1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  z-index: 1;
 }
 .card-restau__image {
   border-radius: 15px 15px 0px 0px;
@@ -238,11 +324,13 @@ h2 {
   height: 100%;
   width: 100%;
   color: black;
-  transition: all 3000ms;
+  transition: all 500ms;
 }
 .card-restau__sp-betw__logo:hover {
-  background: linear-gradient(to bottom left, #9e67df, #ff86de);
+  -webkit-animation: heart-full 500ms linear forwards;
+          animation: heart-full 500ms linear forwards;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
