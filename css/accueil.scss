@@ -11,6 +11,7 @@ $primary-color : #9356DC;
 $secondary-color : #FF79DA;
 $tertiary-color : #99E2D0;
 $arrow-color : #c968db;
+$width-desktop : 1024px;
 
 /* ------------ Mixins ------------ */
 
@@ -97,8 +98,10 @@ $arrow-color : #c968db;
 .bg-grey{
     background-color: #ededed;
     padding: 2rem 0rem 2rem 0rem;
-    @media (min-width: 1024px) {
+    @media (min-width: $width-desktop) {
       margin: 0% 30% 0% 30%;
+      background-color: white;
+      padding: 0.5rem 0rem 0rem 0rem;
     }
 }
 
@@ -127,6 +130,10 @@ a.not-shape-links-contact:visited{
 }
 h2{
     padding: 2.5rem 1rem 0rem 1rem;
+    @media (min-width: $width-desktop) {
+        padding: 0rem 0rem 0rem 0rem;
+        @include obj-center;
+    }
 }
 
 /* ------------ Spinner for loading ------------ */
@@ -141,7 +148,7 @@ h2{
     &__arrow{
         color: $arrow-color;
         font-size: 5rem;
-        animation: loading 1s linear infinite both;
+        animation: loading 1s linear 10 both;
     }
 }
 /* ------------ Location of the smartphone ------------ */
@@ -152,7 +159,7 @@ h2{
     padding: 1rem;
     background-color: #dfdfdf;
     @include obj-center;
-    @media (min-width: 1024px) {
+    @media (min-width: $width-desktop) {
         margin: 0% 30% 0% 30%;
     }
     &__logo{
@@ -196,7 +203,7 @@ h2{
     margin-bottom: 2.5rem;
 }
 .responsive-fonct{
-    @media (min-width: 1024px) {
+    @media (min-width: $width-desktop) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -206,8 +213,8 @@ h2{
 .fonct{
     padding: 1rem;
     @include align-hori;
-    @media (min-width: 1024px) {
-        padding: 2rem;
+    @media (min-width: $width-desktop) {
+        padding: 0rem 2rem 0rem 2rem;
     }
     &__nmbr-form{
         color: white;
@@ -220,6 +227,9 @@ h2{
         padding: 1.5rem 1.5rem 1.5rem 1rem;
         font-size: 1.2rem;
         color: #797979;
+        @media (min-width: $width-desktop) {
+            padding: 1rem 1.5rem 1rem 1rem;
+          }
         &__restau{
             color: $primary-color;
         }
@@ -232,7 +242,7 @@ h2{
         border-radius: 1rem;
         width: 90%;
         font-weight: 500;
-        @media (min-width: 1024px) {
+        @media (min-width: $width-desktop) {
             padding: 0.5rem 1rem 0.5rem 1rem;
         }
         &__restau{
@@ -244,6 +254,10 @@ h2{
 /* ------------ Restaurants ------------ */
 .bg-restau{
     background-color: #ededed;
+    @media (min-width: $width-desktop) {
+        margin: 0% 10% 0% 10%;
+    }
+    
 }
 .card-restau{
     background-color: white;
@@ -252,6 +266,9 @@ h2{
     width: 90%;
     position: relative;
     @include card-shadow;
+    @media (min-width: $width-desktop) {
+        width: 15rem;
+    }
     &__new{
         position: absolute;
         right: 1rem;
@@ -292,17 +309,27 @@ h2{
             height: 100%;
             width: 100%;
             color: black;
-            transition: all 500ms;
+            transition: all 300ms;
             &:hover{
                 // background: linear-gradient(to bottom left,#9e67df,#ff86de);
-                animation: heart-full 500ms linear forwards;
+                animation: heart-full 300ms linear forwards;
                 @include bg-color();
                 font-weight: bold;
             }
         }
     }
 }
-
+.card-responsive{
+    &__restau{
+        display: block;
+    }
+    @media (min-width: $width-desktop) {
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        margin: 0% 5% 0% 5%;
+    }
+}
 /* ------------ Footer ------------ */
 
 .foot{
@@ -310,10 +337,16 @@ h2{
     color : white;
     padding: 1rem;
     margin-top: 2.5rem;
+    @media (min-width: $width-desktop) {
+        margin: 0% 10% 0% 10%;
+    }
     &__logo-ohmyfood{
         font-family: 'Shrikhand','Roboto', Impact, "Arial Black", Arial, Verdana, sans-serif;
         font-size: large;
         padding-bottom: 1rem;
+        @media (min-width: $width-desktop) {
+            @include obj-center;
+        }
     }
     &__restaurant-proposal{
         @include align-hori;
@@ -342,5 +375,13 @@ h2{
     }
     &__contact{
         padding-bottom: $padding-footer;
+    }
+}
+.foot-responsive{
+    @media (min-width: $width-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
     }
 }
