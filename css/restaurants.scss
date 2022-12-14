@@ -6,7 +6,7 @@ $border-nul: 0px;
 $font-weight-name : 500;
 $font-weight-location : 300;
 $padding-footer : 0.5rem;
-$nbm-food : 9;
+$nbm-food : 10;
 $primary-color : #9356DC;
 $secondary-color : #FF79DA;
 $tertiary-color : #99E2D0;
@@ -144,10 +144,9 @@ a.not-shape-links-contact:visited{
 /* ------------ Restaurant image and name ------------ */
 
 .image-bg{
-    background-image: url(../images/restaurants/a_la_francaise.jpg);
-    background-size: cover;
     height: 15rem;
     width: 100%;
+    object-fit: cover;
     @media (min-width: $width-desktop) {
         border-radius: 1rem 1rem 0rem 0rem;
     }

@@ -164,10 +164,10 @@ a.not-shape-links-contact:visited {
 
 /* ------------ Restaurant image and name ------------ */
 .image-bg {
-  background-image: url(../images/restaurants/a_la_francaise.jpg);
-  background-size: cover;
   height: 15rem;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   .image-bg {
@@ -846,6 +846,71 @@ a.not-shape-links-contact:visited {
           animation: rotation-icon 500ms linear both;
 }
 .card-food-9:hover .card-food-9__infos {
+  width: 80%;
+}
+
+.card-food-10 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
+  transition: all 0.3s;
+  height: 75px;
+  -webkit-animation: sliding 500ms 2000ms backwards;
+          animation: sliding 500ms 2000ms backwards;
+}
+.card-food-10__infos {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s;
+}
+.card-food-10__infos__txt {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.card-food-10__infos__txt-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-food-10__infos__txt-and-price__txt {
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 82%;
+}
+.card-food-10__infos__txt-and-price__price {
+  font-weight: 500;
+}
+.card-food-10__checked {
+  background-color: #99E2D0;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 550ms linear;
+}
+.card-food-10__checked__icon {
+  color: white;
+  transform-origin: center;
+  font-size: x-large;
+}
+.card-food-10:hover .card-food-10__checked {
+  width: 20%;
+}
+.card-food-10:hover .card-food-10__checked__icon {
+  -webkit-animation: rotation-icon 500ms linear both;
+          animation: rotation-icon 500ms linear both;
+}
+.card-food-10:hover .card-food-10__infos {
   width: 80%;
 }
 
