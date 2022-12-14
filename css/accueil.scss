@@ -348,7 +348,7 @@ h2{
             // transition: all 300ms;
             &:hover{
                 // background: linear-gradient(to bottom left,#9e67df,#ff86de);
-                animation: heart-full 300ms linear forwards;
+                animation: heart-full 300ms linear both;
                 @include bg-color();
                 font-weight: bold;
                 // color: transparent;
