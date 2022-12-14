@@ -208,8 +208,14 @@ a.not-shape-links-contact:visited {
   transition: all 300ms;
 }
 .restau-name__icon:hover {
-  -webkit-animation: heart-full 300ms linear forwards;
-          animation: heart-full 300ms linear forwards;
+  -webkit-animation: heart-full;
+          animation: heart-full;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -281,6 +287,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-1__infos__txt {
   font-weight: 500;
@@ -291,13 +298,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-1__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-1__infos__txt-and-price__price {
   font-weight: 500;
@@ -346,6 +354,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-2__infos__txt {
   font-weight: 500;
@@ -356,13 +365,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-2__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-2__infos__txt-and-price__price {
   font-weight: 500;
@@ -411,6 +421,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-3__infos__txt {
   font-weight: 500;
@@ -421,13 +432,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-3__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-3__infos__txt-and-price__price {
   font-weight: 500;
@@ -476,6 +488,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-4__infos__txt {
   font-weight: 500;
@@ -486,13 +499,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-4__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-4__infos__txt-and-price__price {
   font-weight: 500;
@@ -541,6 +555,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-5__infos__txt {
   font-weight: 500;
@@ -551,13 +566,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-5__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-5__infos__txt-and-price__price {
   font-weight: 500;
@@ -606,6 +622,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-6__infos__txt {
   font-weight: 500;
@@ -616,13 +633,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-6__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-6__infos__txt-and-price__price {
   font-weight: 500;
@@ -671,6 +689,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-7__infos__txt {
   font-weight: 500;
@@ -681,13 +700,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-7__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-7__infos__txt-and-price__price {
   font-weight: 500;
@@ -736,6 +756,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-8__infos__txt {
   font-weight: 500;
@@ -746,13 +767,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-8__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-8__infos__txt-and-price__price {
   font-weight: 500;
@@ -801,6 +823,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-9__infos__txt {
   font-weight: 500;
@@ -811,13 +834,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-9__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-9__infos__txt-and-price__price {
   font-weight: 500;
@@ -866,6 +890,7 @@ a.not-shape-links-contact:visited {
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
+  overflow: hidden;
 }
 .card-food-10__infos__txt {
   font-weight: 500;
@@ -876,13 +901,14 @@ a.not-shape-links-contact:visited {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .card-food-10__infos__txt-and-price__txt {
   font-weight: 300;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  width: 82%;
+  overflow: hidden;
+  padding-right: 10px;
 }
 .card-food-10__infos__txt-and-price__price {
   font-weight: 500;
