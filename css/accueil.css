@@ -132,6 +132,13 @@
     padding: 0.5rem 0rem 0rem 0rem;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bg-grey {
+    margin: 0% 20% 0% 20%;
+    background-color: white;
+    padding: 0.5rem 0rem 0rem 0rem;
+  }
+}
 
 .logo {
   padding: 1rem;
@@ -171,6 +178,12 @@ h2 {
     justify-content: center;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /* ------------ Spinner for loading ------------ */
 .loading-spin {
@@ -202,7 +215,12 @@ h2 {
 }
 @media (min-width: 1024px) {
   .location {
-    margin: 0% 30% 0% 30%;
+    margin: 0% 35% 0% 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .location {
+    margin: 0% 25% 0% 25%;
   }
 }
 .location__logo {
@@ -234,7 +252,6 @@ h2 {
   margin: 0rem 5rem 0rem 5rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  /* background-color: #c968db; */
   transition: all 400ms;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
@@ -256,6 +273,11 @@ h2 {
     flex-direction: row;
     justify-content: center;
     width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-fonct {
+    margin: 0% 20% 0% 20%;
   }
 }
 
@@ -333,6 +355,11 @@ h2 {
     width: 15rem;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-restau {
+    width: 15rem;
+  }
+}
 .card-restau__new {
   position: absolute;
   right: 1rem;
@@ -399,6 +426,14 @@ h2 {
     margin: 0% 5% 0% 5%;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-responsive {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+  }
+}
 
 /* ------------ Footer ------------ */
 .foot {
@@ -418,6 +453,12 @@ h2 {
   padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
+  .foot__logo-ohmyfood {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .foot__logo-ohmyfood {
     display: flex;
     justify-content: center;
@@ -457,6 +498,14 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+  .foot-responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .foot-responsive {
     display: flex;
     flex-direction: row;

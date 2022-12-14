@@ -154,12 +154,15 @@ a.not-shape-links-contact:visited {
     width: 100%;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .head-align {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
 
 /* ------------ Restaurant image and name ------------ */
-/* .restau-food{
-    width: 100%;
-    position: relative;
-} */
 .image-bg {
   background-image: url(../images/restaurants/a_la_francaise.jpg);
   background-size: cover;
@@ -167,6 +170,11 @@ a.not-shape-links-contact:visited {
   width: 100%;
 }
 @media (min-width: 1024px) {
+  .image-bg {
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .image-bg {
     border-radius: 1rem 1rem 0rem 0rem;
   }
@@ -211,6 +219,11 @@ a.not-shape-links-contact:visited {
 @media (min-width: 1024px) {
   .name-responsive {
     margin: 0% 35% 0% 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .name-responsive {
+    margin: 0% 20% 0% 20%;
   }
 }
 
@@ -836,14 +849,35 @@ a.not-shape-links-contact:visited {
   width: 80%;
 }
 
-.food-responsive {
-  margin: 0% 5% 0% 5%;
-}
 @media (min-width: 1024px) {
   .food-responsive {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0% 5% 0% 5%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .food-responsive {
+    margin: 0% 15% 0% 15%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .entrees-responsive {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .plat-responsive {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desserts-responsive {
+    width: 30%;
   }
 }
 
@@ -854,12 +888,21 @@ a.not-shape-links-contact:visited {
   margin: 2.5rem 5rem 0rem 5rem;
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  /* background-color: #c968db; */
   transition: all 400ms;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: all 0.3s;
   display: flex;
   justify-content: center;
+}
+@media (min-width: 1024px) {
+  .command {
+    margin: 2% 35% 2% 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .command {
+    margin: 2% 30% 2% 30%;
+  }
 }
 .command:hover {
   background: linear-gradient(to bottom right, #ff86de, #9e67df);
@@ -873,10 +916,27 @@ a.not-shape-links-contact:visited {
   padding: 1rem;
   margin-top: 2.5rem;
 }
+@media (min-width: 1024px) {
+  .foot {
+    margin: 0% 10% 0% 10%;
+  }
+}
 .foot__logo-ohmyfood {
   font-family: "Shrikhand", "Roboto", Impact, "Arial Black", Arial, Verdana, sans-serif;
   font-size: large;
   padding-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .foot__logo-ohmyfood {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .foot__logo-ohmyfood {
+    display: flex;
+    justify-content: center;
+  }
 }
 .foot__restaurant-proposal {
   display: flex;
@@ -909,4 +969,21 @@ a.not-shape-links-contact:visited {
 }
 .foot__contact {
   padding-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .foot-responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .foot-responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+  }
 }/*# sourceMappingURL=restaurants.css.map */
