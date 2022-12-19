@@ -3,11 +3,7 @@
 /* ------------ Mixins ------------ */
 /* ------------ Key frames ------------ */
 @-webkit-keyframes bg-white {
-  0% {
-    z-index: 10;
-    opacity: 1;
-  }
-  20% {
+  0%, 30% {
     z-index: 10;
     opacity: 1;
   }
@@ -18,11 +14,7 @@
   }
 }
 @keyframes bg-white {
-  0% {
-    z-index: 10;
-    opacity: 1;
-  }
-  20% {
+  0%, 30% {
     z-index: 10;
     opacity: 1;
   }
@@ -344,7 +336,6 @@ h2 {
   transition: 0.3s;
   padding-left: 1rem;
   margin-left: 0.6rem;
-  /* border: solid red 1px; */
   border-radius: 1rem;
   width: 90%;
   font-weight: 500;
@@ -377,12 +368,7 @@ h2 {
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
   transition: 0.3s;
 }
-@media (min-width: 1024px) {
-  .card-restau {
-    width: 15rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .card-restau {
     width: 15rem;
   }
@@ -444,20 +430,12 @@ h2 {
 .card-responsive__restau {
   display: block;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .card-responsive {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-between;
     margin: 0% 5% 0% 5%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .card-responsive {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
-    padding: 0% 5% 0% 5%;
   }
 }
 
@@ -478,13 +456,7 @@ h2 {
   font-size: large;
   padding-bottom: 1rem;
 }
-@media (min-width: 1024px) {
-  .foot__logo-ohmyfood {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .foot__logo-ohmyfood {
     display: flex;
     justify-content: center;
@@ -523,15 +495,7 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-@media (min-width: 1024px) {
-  .foot-responsive {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0% 5% 0% 5%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .foot-responsive {
     display: flex;
     flex-direction: row;

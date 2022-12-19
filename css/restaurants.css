@@ -147,14 +147,7 @@ a.not-shape-links-contact:visited {
   font-size: x-large;
   padding-left: 1rem;
 }
-@media (min-width: 1024px) {
-  .head-align {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .head-align {
     display: flex;
     justify-content: center;
@@ -169,12 +162,7 @@ a.not-shape-links-contact:visited {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 1024px) {
-  .image-bg {
-    border-radius: 1rem 1rem 0rem 0rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .image-bg {
     border-radius: 1rem 1rem 0rem 0rem;
   }
@@ -954,19 +942,7 @@ a.not-shape-links-contact:visited {
 }
 
 @media (min-width: 1024px) {
-  .entrees-responsive {
-    width: 30%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .plat-responsive {
-    width: 30%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .desserts-responsive {
+  .entrees-responsive, .plat-responsive, .desserts-responsive {
     width: 30%;
   }
 }
@@ -1016,13 +992,7 @@ a.not-shape-links-contact:visited {
   font-size: large;
   padding-bottom: 1rem;
 }
-@media (min-width: 1024px) {
-  .foot__logo-ohmyfood {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .foot__logo-ohmyfood {
     display: flex;
     justify-content: center;
@@ -1061,15 +1031,7 @@ a.not-shape-links-contact:visited {
   padding-bottom: 0.5rem;
 }
 
-@media (min-width: 1024px) {
-  .foot-responsive {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0% 5% 0% 5%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .foot-responsive {
     display: flex;
     flex-direction: row;

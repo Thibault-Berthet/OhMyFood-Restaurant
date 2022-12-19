@@ -14,6 +14,7 @@
 
     <body>
 
+        <!-- Spinner d'attente de chargement du site -->
         <div class="loading-spin">
             <div class="loading-spin__arrow"><i class="fa-solid fa-arrows-rotate"></i></div>
         </div>
@@ -23,7 +24,9 @@
                 <img src="images/logo/ohmyfood@2x_logo.svg" alt="Logo OhMyFood" title="Bienvenue sur OhMyFood" />
             </div>
             <div class="location">
-                <i class="fa-solid fa-location-dot location__logo"></i>Paris, Belleville
+                <a href="location.php" title="choixdelaposition" class="not-shape-links">
+                <i class="fa-solid fa-location-dot location__logo"></i>
+                Paris, Belleville</a>
             </div>
             <div class="bg-grey">
                 <h1 class="instr-1">
@@ -47,9 +50,9 @@
                     <div class="fonct">
                         <div class="fonct__nmbr-form">1</div>
                             <div class="fonct__order">
-                                <i class="fa-solid fa-mobile-screen-button fonct__logo icon-mobile"></i>
-                                <i class="fa-solid fa-tablet-screen-button fonct__logo icon-tablet"></i>
-                                <i class="fa-solid fa-desktop fonct__logo icon-desktop"></i>
+                                <i class="fa-solid fa-mobile-screen-button fonct__logo"></i>
+                                <i class="fa-solid fa-tablet-screen-button fonct__logo"></i>
+                                <i class="fa-solid fa-desktop fonct__logo"></i>
                                 Choisissez un restaurant
                             </div>
                     </div>
@@ -61,6 +64,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Les cartes des différents restaurants -->
 
             <div class="bg-restau">
             <h2 id="nosrestaurants">Restaurants</h2>
