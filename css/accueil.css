@@ -419,8 +419,8 @@ h2 {
   color: black;
 }
 .card-restau__sp-betw__logo:hover {
-  -webkit-animation: heart-full 300ms linear both;
-          animation: heart-full 300ms linear both;
+  -webkit-animation: heart-full 300ms ease-in-out both;
+          animation: heart-full 300ms ease-in-out both;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

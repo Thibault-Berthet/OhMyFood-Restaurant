@@ -332,7 +332,7 @@ h2{
             width: 100%;
             color: black;
             &:hover{
-                animation: heart-full 300ms linear both;
+                animation: heart-full 300ms ease-in-out both;
                 @include bg-color();
                 font-weight: bold;
             }

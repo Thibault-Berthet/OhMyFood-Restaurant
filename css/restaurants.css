@@ -195,14 +195,8 @@ a.not-shape-links-contact:visited {
   color: black;
 }
 .restau-name__icon:hover {
-  -webkit-animation: heart-full;
-          animation: heart-full;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation: heart-full 300ms ease-in-out forwards;
+          animation: heart-full 300ms ease-in-out forwards;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
