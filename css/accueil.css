@@ -1,7 +1,4 @@
-/* ------------ Code Sass de la page d'accueil du site ------------ */
-/* ------------ Variables ------------ */
-/* ------------ Mixins ------------ */
-/* ------------ Key frames ------------ */
+/* ------------ Code Sass de la page d'accueil du site ------------ */ /* ------------ Variables ------------ */ /* ------------ Mixins ------------ */ /* ------------ Key Frames ------------ */
 @-webkit-keyframes bg-white {
   0%, 30% {
     z-index: 10;
@@ -40,6 +37,42 @@
   100% {
     transform: rotate(360deg);
     visibility: collapse;
+  }
+}
+@-webkit-keyframes sliding {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes sliding {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotation-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes heart-full {
@@ -145,7 +178,7 @@ a.not-shape-links {
   justify-content: center;
 }
 
-a.not-shape-links:visited {
+a.not-shape-links:visited, a.not-shape-links-contact:visited {
   color: inherit;
   font-weight: inherit;
 }
@@ -153,11 +186,6 @@ a.not-shape-links:visited {
 a.not-shape-links-contact {
   text-decoration: none;
   color: white;
-}
-
-a.not-shape-links-contact:visited {
-  color: inherit;
-  font-weight: inherit;
 }
 
 h2 {
@@ -439,6 +467,7 @@ h2 {
   }
 }
 
+/* ------------ Footer ------------ */
 /* ------------ Footer ------------ */
 .foot {
   background-color: #272727;

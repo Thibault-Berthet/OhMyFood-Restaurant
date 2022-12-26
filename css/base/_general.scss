@@ -1,0 +1,54 @@
+/* ------------ General change ------------ */
+
+.html, body, h1{
+    margin: $border-nul;
+    padding: $border-nul;
+    font-family: 'Roboto','Shrikhand', Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.bg-grey{
+    background-color: #ededed;
+    padding: 2rem 0rem 2rem 0rem;
+    @media (min-width: $width-desktop) {
+      margin: 0% 30% 0% 30%;
+      background-color: white;
+      padding: 0.5rem 0rem 0rem 0rem;
+    }
+    @media (min-width: $width-min-tablet) and (max-width: $width-max-tablet) {
+        margin: 0% 20% 0% 20%;
+        background-color: white;
+        padding: 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+.logo{
+    padding: 1rem;
+    @include obj-center;
+}
+
+a.not-shape-links{
+    text-decoration: none;
+    color: black;
+    @include obj-center;
+}
+
+a.not-shape-links:visited, a.not-shape-links-contact:visited{
+    color: inherit;
+    font-weight: inherit;
+}
+
+a.not-shape-links-contact{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    padding: 2.5rem 1rem 0rem 1rem;
+    @media (min-width: $width-desktop) {
+        padding: 0rem 0rem 0rem 0rem;
+        @include obj-center;
+    }
+    @media (min-width: $width-min-tablet) and (max-width: $width-max-tablet) {
+        @include obj-center;
+    }
+}

@@ -1,118 +1,12 @@
 /* ------------ Code Sass des différents restaurants du site ------------ */
 
-/* ------------ Variables ------------ */
+@import "utils/variables";
 
-$border-nul: 0px;
-$font-weight-name : 500;
-$font-weight-location : 300;
-$padding-footer : 0.5rem;
-$nbm-food : 10;
-$primary-color : #9356DC;
-$secondary-color : #FF79DA;
-$tertiary-color : #99E2D0;
-$width-desktop : 1024px;
-$width-min-tablet : 768px;
-$width-max-tablet : 1023px;
+@import "utils/mixins";
 
-/* ------------ Mixins ------------ */
+@import "utils/keyframes";
 
-@mixin card-shadow {
-    box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-    transition: all 0.3s;
-}
-@mixin obj-center {
-    display: flex;
-    justify-content: center;
-}
-@mixin align-hori {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-@mixin shape-word-menu {
-    font-weight: 300;
-    margin: 1rem;
-    padding-bottom: 0.4rem;
-    &__underline{
-        border-bottom: solid $tertiary-color 3px;
-        padding-bottom: 0.4rem;
-        position: absolute;
-        width: 10%;
-    }
-}
-@mixin bg-color {
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* ------------ Key frames ------------ */
-
-@keyframes sliding {
-    from{
-        transform: translateY(2rem);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes rotation-icon {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg)
-    }
-}
-@keyframes heart-full {
-    0%{
-        background: linear-gradient(to top, #c968db 5%, white 5%);
-        @include bg-color();
-    }
-    25%{
-        background: linear-gradient(to top, #c968db 25%, white 25%);
-        @include bg-color();
-    }
-    50%{
-        background: linear-gradient(to top, #c968db 50%, white 50%);
-        @include bg-color();
-    }
-    75%{
-        background: linear-gradient(to top, #c968db 75%, white 75%);
-        @include bg-color();
-    }
-    100%{
-        background: linear-gradient(to bottom left,#9e67df,#ff86de);
-        @include bg-color();
-    }
-}
-
-/* ------------ General change ------------ */
-
-.html, body{
-    margin: $border-nul;
-    padding: $border-nul;
-    font-family: 'Roboto','Shrikhand', Impact, "Arial Black", Arial, Verdana, sans-serif;
-}
-a.not-shape-links{
-    text-decoration: none;
-    color: black;
-    @include obj-center;
-}
-a.not-shape-links:visited{
-    color: inherit;
-    font-weight: inherit;
-}
-a.not-shape-links-contact{
-    text-decoration: none;
-    color: white;
-}
-a.not-shape-links-contact:visited{
-    color: inherit;
-    font-weight: inherit;
-}
+@import "base/general";
 
 /* ------------ Header ------------ */
 
@@ -292,59 +186,6 @@ a.not-shape-links-contact:visited{
     }
 }
 
-
 /* ------------ Footer ------------ */
 
-.foot{
-    background-color: #272727;
-    color : white;
-    padding: 1rem;
-    margin-top: 2.5rem;
-    @media (min-width: $width-desktop) {
-        margin: 0% 10% 0% 10%;
-    }
-    &__logo-ohmyfood{
-        font-family: 'Shrikhand','Roboto', Impact, "Arial Black", Arial, Verdana, sans-serif;
-        font-size: large;
-        padding-bottom: 1rem;
-        @media (min-width: $width-min-tablet) {
-            @include obj-center;
-        }
-    }
-    &__restaurant-proposal{
-        @include align-hori;
-        padding-bottom: $padding-footer;
-        &__logo{
-            padding-right: 0.3rem;
-            font-size: small;
-        }
-        &__txt{
-            padding-left: 0.3rem
-        }
-    }
-    &__became-partner{
-        @include align-hori;
-        padding-bottom: $padding-footer;
-        &__logo{
-            font-size: x-small;
-            transform: rotate(-40deg);
-        }
-        &__txt{
-            padding-left: 0.5rem;
-        }
-    }
-    &__legal-mention{
-        padding-bottom: $padding-footer;
-    }
-    &__contact{
-        padding-bottom: $padding-footer;
-    }
-}
-.foot-responsive{
-    @media (min-width: $width-min-tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0% 5% 0% 5%;
-    }
-}
+@import "layout/footer";

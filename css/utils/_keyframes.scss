@@ -1,0 +1,66 @@
+/* ------------ Key Frames ------------ */
+
+@keyframes bg-white {
+    0%,30%{
+        z-index: 10;
+        opacity: 1;
+    }
+    100%{
+        visibility: collapse;
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        visibility: collapse;
+    }
+}
+
+@keyframes sliding {
+    from{
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotation-icon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes heart-full {
+    0%{
+        background: linear-gradient(to top, #c968db 5%, white 5%);
+        @include bg-color();
+    }
+    25%{
+        background: linear-gradient(to top, #c968db 25%, white 25%);
+        @include bg-color();
+    }
+    50%{
+        background: linear-gradient(to top, #c968db 50%, white 50%);
+        @include bg-color();
+    }
+    75%{
+        background: linear-gradient(to top, #c968db 75%, white 75%);
+        @include bg-color();
+    }
+    100%{
+        background: linear-gradient(to bottom left,#9e67df,#ff86de);
+        @include bg-color();
+    }
+}

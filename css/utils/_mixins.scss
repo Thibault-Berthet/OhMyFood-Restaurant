@@ -1,0 +1,35 @@
+/* ------------ Mixins ------------ */
+
+@mixin card-shadow {
+    box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
+    transition: 0.3s;
+}
+
+@mixin obj-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin align-hori {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin shape-word-menu {
+    font-weight: 300;
+    margin: 1rem;
+    padding-bottom: 0.4rem;
+    &__underline{
+        border-bottom: solid $tertiary-color 3px;
+        padding-bottom: 0.4rem;
+        position: absolute;
+        width: 10%;
+    }
+}
+
+@mixin bg-color {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

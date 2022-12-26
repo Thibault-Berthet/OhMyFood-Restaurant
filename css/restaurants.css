@@ -1,8 +1,45 @@
 @charset "UTF-8";
-/* ------------ Code Sass des différents restaurants du site ------------ */
-/* ------------ Variables ------------ */
-/* ------------ Mixins ------------ */
-/* ------------ Key frames ------------ */
+/* ------------ Code Sass des différents restaurants du site ------------ */ /* ------------ Variables ------------ */ /* ------------ Mixins ------------ */ /* ------------ Key Frames ------------ */
+@-webkit-keyframes bg-white {
+  0%, 30% {
+    z-index: 10;
+    opacity: 1;
+  }
+  100% {
+    visibility: collapse;
+    z-index: 0;
+    opacity: 0;
+  }
+}
+@keyframes bg-white {
+  0%, 30% {
+    z-index: 10;
+    opacity: 1;
+  }
+  100% {
+    visibility: collapse;
+    z-index: 0;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: collapse;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: collapse;
+  }
+}
 @-webkit-keyframes sliding {
   from {
     transform: translateY(2rem);
@@ -104,10 +141,35 @@
   }
 }
 /* ------------ General change ------------ */
-.html, body {
+.html, body, h1 {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", "Shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.bg-grey {
+  background-color: #ededed;
+  padding: 2rem 0rem 2rem 0rem;
+}
+@media (min-width: 1024px) {
+  .bg-grey {
+    margin: 0% 30% 0% 30%;
+    background-color: white;
+    padding: 0.5rem 0rem 0rem 0rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bg-grey {
+    margin: 0% 20% 0% 20%;
+    background-color: white;
+    padding: 0.5rem 0rem 0rem 0rem;
+  }
+}
+
+.logo {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 a.not-shape-links {
@@ -117,7 +179,7 @@ a.not-shape-links {
   justify-content: center;
 }
 
-a.not-shape-links:visited {
+a.not-shape-links:visited, a.not-shape-links-contact:visited {
   color: inherit;
   font-weight: inherit;
 }
@@ -127,9 +189,21 @@ a.not-shape-links-contact {
   color: white;
 }
 
-a.not-shape-links-contact:visited {
-  color: inherit;
-  font-weight: inherit;
+h2 {
+  padding: 2.5rem 1rem 0rem 1rem;
+}
+@media (min-width: 1024px) {
+  h2 {
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* ------------ Header ------------ */
@@ -259,7 +333,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 200ms backwards;
           animation: sliding 500ms 200ms backwards;
@@ -326,7 +400,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 400ms backwards;
           animation: sliding 500ms 400ms backwards;
@@ -393,7 +467,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 600ms backwards;
           animation: sliding 500ms 600ms backwards;
@@ -460,7 +534,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 800ms backwards;
           animation: sliding 500ms 800ms backwards;
@@ -527,7 +601,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 1000ms backwards;
           animation: sliding 500ms 1000ms backwards;
@@ -594,7 +668,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 1200ms backwards;
           animation: sliding 500ms 1200ms backwards;
@@ -661,7 +735,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 1400ms backwards;
           animation: sliding 500ms 1400ms backwards;
@@ -728,7 +802,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 1600ms backwards;
           animation: sliding 500ms 1600ms backwards;
@@ -795,7 +869,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 1800ms backwards;
           animation: sliding 500ms 1800ms backwards;
@@ -862,7 +936,7 @@ a.not-shape-links-contact:visited {
   margin: 0.5rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   height: 75px;
   -webkit-animation: sliding 500ms 2000ms backwards;
           animation: sliding 500ms 2000ms backwards;
@@ -950,7 +1024,7 @@ a.not-shape-links-contact:visited {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   transition: all 400ms;
   box-shadow: 4px 4px 8px 0 rgba(146, 146, 146, 0.8);
-  transition: all 0.3s;
+  transition: 0.3s;
   display: flex;
   justify-content: center;
 }
@@ -969,6 +1043,7 @@ a.not-shape-links-contact:visited {
   box-shadow: 4px 4px 8px 0 rgb(146, 146, 146);
 }
 
+/* ------------ Footer ------------ */
 /* ------------ Footer ------------ */
 .foot {
   background-color: #272727;
