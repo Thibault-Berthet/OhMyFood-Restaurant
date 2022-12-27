@@ -185,14 +185,14 @@ a.not-shape-links-button {
   justify-content: center;
 }
 
-a.not-shape-links:visited, a.not-shape-links-contact:visited {
-  color: inherit;
-  font-weight: inherit;
-}
-
 a.not-shape-links-contact {
   text-decoration: none;
   color: white;
+}
+
+a.not-shape-links:visited, a.not-shape-links-contact:visited, a.not-shape-links-button:visited {
+  color: inherit;
+  font-weight: inherit;
 }
 
 h2 {
