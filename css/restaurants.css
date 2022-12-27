@@ -179,6 +179,13 @@ a.not-shape-links {
   justify-content: center;
 }
 
+a.not-shape-links-button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 a.not-shape-links:visited, a.not-shape-links-contact:visited {
   color: inherit;
   font-weight: inherit;

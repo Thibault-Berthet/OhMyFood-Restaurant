@@ -178,6 +178,13 @@ a.not-shape-links {
   justify-content: center;
 }
 
+a.not-shape-links-button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 a.not-shape-links:visited, a.not-shape-links-contact:visited {
   color: inherit;
   font-weight: inherit;
@@ -228,10 +235,11 @@ h2 {
 .location {
   box-shadow: 0px 2px 6px gray inset;
   font-weight: 500;
-  padding: 1rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
   background-color: #dfdfdf;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .location {
@@ -245,6 +253,18 @@ h2 {
 }
 .location__logo {
   padding: 0px 10px 0px 10px;
+}
+.location__finder {
+  background-color: #dfdfdf;
+  font-family: "Roboto", "Shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
+  font-weight: 500;
+  height: 30px;
+  width: 8rem;
+  font-size: medium;
+  border: none;
+}
+.location__finder:focus {
+  outline: none;
 }
 
 /* ------------ Instruction ------------ */

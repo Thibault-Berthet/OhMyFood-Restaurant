@@ -32,6 +32,12 @@ a.not-shape-links{
     @include obj-center;
 }
 
+a.not-shape-links-button{
+    text-decoration: none;
+    color: white;
+    @include obj-center;
+}
+
 a.not-shape-links:visited, a.not-shape-links-contact:visited{
     color: inherit;
     font-weight: inherit;
