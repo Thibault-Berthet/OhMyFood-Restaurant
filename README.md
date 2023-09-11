@@ -1,4 +1,4 @@
-# Site-Ohmyfood
+# Site Ohmyfood
 
 Bonjour, Bonsoir,
 
